@@ -50,27 +50,29 @@ A aplicação consome a API criada no desafio anterior e permite a gestão compl
 - Consumo da API 🌍
 - Comunicação com o back-end para manipulação dos dados.
 ## 📌 Como rodar o projeto
-1️⃣ Clone o repositório:
+1. **Clone o repositório:**
+ ```bash
+   git clone https://github.com/seu-usuario/front-cursos-programacao.git
+   ```
 
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/front-cursos-programacao.git
-2️⃣ Acesse o diretório do projeto:
+2. **Navegue até a pasta do projeto:**
+   ```bash
+   cd front-cursos-programacao
+   ```
 
-bash
-Copiar
-Editar
-cd front-cursos-programacao
-3️⃣ Configure o banco de dados no application.properties
+3. **Configure o banco de dados no application.properties:**
+   ```bash
+   server.port=8082
+   ```
 
-4️⃣ Execute o projeto:
+4. **Execute o projeto com Maven:**
+   ```bash
+   mvn spring-boot:run
+   ```
 
-bash
-Copiar
-Editar
-./mvnw spring-boot:run
-5️⃣ Acesse a aplicação no navegador:
+5. **Acesse a aplicação:**
+   - **Back-end:** [http://localhost:8080](http://localhost:8080)
+   - **Front-end:** [http://localhost:8082](http://localhost:8082) (ajuste conforme o ambiente local)
 
 arduino
 Copiar
