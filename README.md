@@ -1,4 +1,4 @@
-📌 Front-End - Gerenciamento de Cursos
+## 📌 Front-End - Gerenciamento de Cursos
 📖 Sobre o projeto
 Este projeto é a interface front-end para o desafio de gerenciamento de cursos de programação. Ele foi desenvolvido utilizando Thymeleaf para renderização dinâmica, Tailwind CSS para estilização e Spring Security para autenticação e controle de acesso.
 
@@ -12,31 +12,34 @@ Tailwind CSS
 Spring Security
 Maven
 📂 Estrutura do projeto
-arduino
-Copiar
-Editar
+
+```plaintext
 📦 front-cursos-programacao  
 ├── 📂 src  
 │   ├── 📂 main  
 │   │   ├── 📂 java/br/com/julia/front_cursos_programacao  
 │   │   │   ├── 📂 cursos  
-│   │   │   │   ├── 📂 controller → Lida com as requisições HTTP  
+│   │   │   │   ├── 📂 controller
 │   │   │   │   │   ├── ProgrammingCoursesController.java  
-│   │   │   │   ├── 📂 dto → Objetos de transferência de dados  
+│   │   │   │   ├── 📂 dto 
 │   │   │   │   │   ├── CreateNewCourseDTO.java  
-│   │   │   │   ├── 📂 service → Lógica de negócio  
+│   │   │   │   ├── 📂 service
 │   │   │   │   │   ├── CreateCourseService.java  
 │   │   │   │   │   ├── ListAllCoursesService.java  
-│   │   │   ├── FrontCursosProgramacaoApplication.java → Classe principal  
-│   │   │   ├── WebConfig.java → Configuração do Spring Security  
+│   │   │   ├── FrontCursosProgramacaoApplication.java 
+│   │   │   ├── WebConfig.java 
 │   │   ├── 📂 resources  
-│   │   │   ├── 📂 static → Arquivos estáticos (CSS, JS, imagens)  
-│   │   │   ├── 📂 templates/courses → Templates Thymeleaf  
-│   │   │   │   ├── criarCurso.html → Página para criação de curso  
-│   │   │   │   ├── detalhesCurso.html → Página de detalhes do curso  
-│   │   │   │   ├── lista.html → Página de listagem de cursos  
-│   │   │   ├── application.properties → Configuração da aplicação  
-├── pom.xml → Dependências do Maven  
+│   │   │   ├── 📂 static 
+│   │   │   ├── 📂 templates/courses 
+│   │   │   │   ├── criarCurso.html
+│   │   │   │   ├── detalhesCurso.html
+│   │   │   │   ├── lista.html
+│   │   │   ├── application.properties 
+├── pom.xml
+
+
+
+```
 🚀 Funcionalidades
 Cadastro de cursos 📝
 Criar um novo curso informando nome, categoria e professor.
