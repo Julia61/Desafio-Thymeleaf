@@ -69,18 +69,11 @@ A aplicação consome a API criada no desafio anterior e permite a gestão compl
    ```bash
    mvn spring-boot:run
    ```
-
 5. **Acesse a aplicação:**
    - **Back-end:** [http://localhost:8080](http://localhost:8080)
    - **Front-end:** [http://localhost:8082](http://localhost:8082) (ajuste conforme o ambiente local)
 
-arduino
-Copiar
-Editar
-http://localhost:8080
-🎨 Layout da aplicação
-O layout base foi inspirado no design disponível no Figma:
-🔗 Edição de cursos | Figma
+
 
 📌 Considerações finais
 Este projeto faz parte de um desafio para desenvolver um sistema completo de gerenciamento de cursos, integrando front-end e back-end. 🚀
