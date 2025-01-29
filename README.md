@@ -1,8 +1,9 @@
 ## 📌 Front-End - Gerenciamento de Cursos
 ### 📖 Sobre o projeto
-Este projeto é a interface front-end para o desafio de gerenciamento de cursos de programação. Ele foi desenvolvido utilizando Thymeleaf para renderização dinâmica, Tailwind CSS para estilização e Spring Security para autenticação e controle de acesso.
+Este projeto é a interface front-end para o desafio de gerenciamento de cursos de programação. Ele foi desenvolvido utilizando Thymeleaf para renderização dinâmica, Tailwind CSS para estilização.
 
 A aplicação consome a API criada no desafio anterior e permite a gestão completa dos cursos, incluindo cadastro, listagem, edição e exclusão.
+<p>Projeto Back-end:<a href="https://github.com/Julia61/Desafio_API_de_Cursos" target="_blank"></a></p>
 
 ## 🛠 Tecnologias utilizadas
 - Java 17
