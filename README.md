@@ -1,16 +1,15 @@
 ## 📌 Front-End - Gerenciamento de Cursos
-📖 Sobre o projeto
+### 📖 Sobre o projeto
 Este projeto é a interface front-end para o desafio de gerenciamento de cursos de programação. Ele foi desenvolvido utilizando Thymeleaf para renderização dinâmica, Tailwind CSS para estilização e Spring Security para autenticação e controle de acesso.
 
 A aplicação consome a API criada no desafio anterior e permite a gestão completa dos cursos, incluindo cadastro, listagem, edição e exclusão.
 
-🛠 Tecnologias utilizadas
-Java 17
-Spring Boot 3
-Thymeleaf
-Tailwind CSS
-Spring Security
-Maven
+## 🛠 Tecnologias utilizadas
+- Java 17
+- Spring Boot 3
+- Thymeleaf
+- Tailwind CSS
+- Maven
 📂 Estrutura do projeto
 
 ```plaintext
@@ -37,24 +36,20 @@ Maven
 │   │   │   ├── application.properties 
 ├── pom.xml
 
-
-
 ```
-🚀 Funcionalidades
-Cadastro de cursos 📝
-Criar um novo curso informando nome, categoria e professor.
-Listagem de cursos 📋
-Exibir todos os cursos cadastrados na API.
-Permitir a busca de cursos por nome e categoria.
-Detalhes e edição de curso 🔍
-Exibir os detalhes do curso.
-Permitir a edição do nome, categoria e professor.
-Possibilitar a exclusão de um curso.
-Segurança com Spring Security 🔐
-Autenticação e controle de acesso.
-Consumo da API 🌍
-Comunicação com o back-end para manipulação dos dados.
-📌 Como rodar o projeto
+## 🚀 Funcionalidades
+- Cadastro de cursos 📝
+- Criar um novo curso informando nome, categoria e professor.
+- Listagem de cursos 📋
+- Exibir todos os cursos cadastrados na API.
+- Permitir a busca de cursos por nome e categoria.
+- Detalhes e edição de curso 🔍
+- Exibir os detalhes do curso.
+- Permitir a edição do nome, categoria e professor.
+- Possibilitar a exclusão de um curso.
+- Consumo da API 🌍
+- Comunicação com o back-end para manipulação dos dados.
+## 📌 Como rodar o projeto
 1️⃣ Clone o repositório:
 
 bash
