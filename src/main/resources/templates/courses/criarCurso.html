@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Cursos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-indigo-950 h-screen items-center flex justify-center">
+<form class="flex gap-24" th:action="@{/programacao/cursos}" method="post" th:object="${curso}" id="ativoSubmit">
+    <div class="text-white max-w-80 text-6xl flex items-center text-4xl font-serif text-7xl">
+        Cadastro de novo curso
+    </div>
+    <div class="bg-slate-300 rounded p-10 text-indigo-700 max-w-md md:max-w-lg lg:max-w-xl">
+        <p class="mb-2 text-bold font-bold">Crie o cadastro de um novo curso:</p>
+        <input type="text" th:field="*{nome}" required
+               class="bg-gray-50 text-gray-900 text-xd rounded w-96 block p-3 mb-5 focus:outline-none focus:ring-sky-600 focus:ring-2"
+
+            placeholder="Nome do curso: (Ex.: JavaScript)">
+
+        <input type="text" th:field="*{categoria}" required
+               class="bg-gray-50 text-gray-900 text-xd rounded w-96 block p-3 mb-5 focus:outline-none focus:ring-sky-600 focus:ring-2"
+
+            placeholder="Categoria do curso: (Ex.: Programação)">
+
+        <input type="text" th:field="*{professor}" required
+               class="bg-gray-50 text-gray-900 text-xd rounded w-96 block p-3 mb-5 focus:outline-none focus:ring-sky-600 focus:ring-2"
+
+               placeholder="Professor do curso.:">
+
+        <input type="text" th:field="*{ativo}" id="ativo" required
+               class="bg-gray-50 text-gray-900 text-xd rounded w-96 block p-3 mb-5 focus:outline-none focus:ring-sky-600 focus:ring-2"
+
+               placeholder="Curso ativo? (Sim/Não)">
+
+        <button class="bg-green-900 w-96 p-4 rounded text-white hover:bg-green-700 font-bold">Criar</button>
+        <p class="text-red-400" th:if="${error_message}" th:text="${error_message}"></p>
+        <p class="text-red-600 hidden text-bold " id="ativo_erro">O ativo deve ser (sim ou não)</p>
+
+    </div>
+
+</form>
+
+</body>
+
+<script>
+    document.getElementById("ativoSubmit").addEventListener("submit", (event) => {
+          var ativo = document.getElementById("ativo").value.trim().toLowerCase();;
+
+          if (ativo !== "sim" && ativo !== "não") {
+            document.getElementById("ativo_erro").classList.remove("hidden"); // Exibe mensagem de erro
+            event.preventDefault(); // Impede o envio do formulário
+          }
+
+    });
+
+    window.addEventListener("pageshow", function () {
+        document.getElementById("ativoSubmit").reset();
+
+    });
+
+</script>
+</html>

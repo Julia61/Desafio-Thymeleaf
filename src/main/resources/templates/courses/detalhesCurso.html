@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Curso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-800">
+<p class="text-center text-emerald-100 text-3xl pt-5 font-serif text-5xl font-bold">Detalhes do Curso</p>
+<div class="items-center justify-center flex mt-20">
+    <div class="pt-10 bg-emerald-50 w-[50%] rounded-xl p-4">
+        <div class="w-9/12 mx-auto">
+            <p class="text-emerald-950 font-bold">Nome do Curso: <span class="text-blue-700" th:text="${course.nome}"></span></p>
+            <p class="text-emerald-950 font-bold">Categoria: <span class="text-blue-700" th:text="${course.categoria}"></span></p>
+            <p class="text-emerald-950 font-bold">Ativo: <span class="text-blue-700" th:text="${course.ativo}"></span></p>
+            <p class="text-emerald-950 font-bold">Professor: <span class="text-blue-700" th:text="${course.professor}"></span></p>
+
+            <div class="flex flex-col items-center space-y-4">
+                <a th:href="@{'/programacao/listas'}"
+                   class="text-center bg-emerald-500 w-full mt-2 rounded font-medium text-emerald-950 p-1">Voltar para lista</a>
+
+                <button class="text-white bg-emerald-900 w-full font-medium rounded p-1" id="botaoEditar">Editar</button>
+
+                <form th:action="@{/programacao/{id}(id=${course.id})}" id="submitForm" method="post" class="w-full">
+                    <input type="hidden" name="_method" value="PUT" />
+
+                    <input type="text" id="nomeDoCurso" th:field="*{course.nome}"
+                           class="curso hidden rounded p-1 w-full bg-green-200 focus:outline-none focus:ring-emerald-800 focus:ring-2" placeholder="Edite o nome do curso:">
+
+                    <input type="text" name="" id="categoriaDoCurso" th:field="*{course.categoria}"
+                           class="curso block mt-10 hidden rounded p-1 w-full bg-green-200 focus:outline-none focus:ring-emerald-800 focus:ring-2" placeholder="Edite a categoria do curso:">
+
+                    <input type="text" name="" id="professorCurso" th:field="*{course.professor}"
+                           class="curso block mt-10 hidden rounded p-1 w-full bg-green-200 focus:outline-none focus:ring-emerald-800 focus:ring-2" placeholder="Professor">
+
+                    <input type="text" name="" id="ativoCurso" th:field="*{course.ativo}"
+                           class="curso block mt-10 hidden rounded p-1 w-full bg-green-200 focus:outline-none focus:ring-emerald-800 focus:ring-2" placeholder="Curso ativo? (sim/não)">
+
+                    <button type="submit" class="curso hidden bg-blue-400 w-full mt-5 rounded font-medium text-emerald-950 p-1" id="atualiza">Atualizar</button>
+                </form>
+
+                <form th:action="@{/programacao/deletando/{id}(id=${course.id})}" method="post" class="w-full">
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <button type="submit" class="curso hidden bg-red-400 w-full rounded font-medium text-emerald-950 p-1">Deletar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+
+<script>
+    document.getElementById("botaoEditar").addEventListener("click", (event) => {
+
+        let cursos = document.querySelectorAll('.curso');
+
+        cursos.forEach(function(curso) {
+            curso.classList.remove('hidden');
+        });
+    });
+
+</script>
+</html>
